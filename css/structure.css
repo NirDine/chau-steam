@@ -1,0 +1,72 @@
+:root {
+  --bradius: 10px;
+  --half-bradius: 0px 0px 20px 20px;
+  --cardSizeHeight: 270px;
+  --cardSizeWidth: 193.76px;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-padding-top: 70px;
+    margin: 0;
+    height: 100%;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+body {
+  position: relative;
+  display: grid;
+  transition: 0.2s;
+  overflow-x: hidden;
+  text-rendering: optimizeSpeed;
+    height: 100%;
+    grid-template-areas: "empty search empty";
+}
+
+
+h1 {
+    font-size: 5em;
+}
+p {
+  font-size: 1.1em;
+  line-height: 1.1em;
+  padding: 10px 0px;
+
+}
+
+
+.container{ 
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    grid-area: search;
+    gap: 1em;
+    margin-top: -4em;
+}
+#search {
+    display: flex;
+}
+.searchInput {
+    padding: 2em;
+    width: 500px;
+    border-top-left-radius: var(--bradius);
+    border-bottom-left-radius: var(--bradius);
+    border: 0px;
+}
+
+.searchButton {
+    padding: 2em;
+    border-top-right-radius: var(--bradius);
+    border-bottom-right-radius: var(--bradius);
+    border: 0px;
+}

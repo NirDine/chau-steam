@@ -1,0 +1,95 @@
+/* ----- FONTS ----- */
+
+/* Import fonts */
+
+
+/* Set font variables */
+:root {
+    --bodyFont: ;
+    --titleFont: ;
+}
+
+/* Set font families for elements */
+p,
+textarea,
+span {
+  font-family: var(--bodyFont);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--titleFont);
+}
+
+/* ----- COLORS ----- */
+
+/* Set color variables */
+:root {
+  --main: #111111;
+  --accent: #74acdf;
+  --contrast: #e1e1e1;
+  --selection: ;
+  --dark: #353535;
+  --bg-art: url(/img/art/bg.webp);
+  --discord: #5865f2;
+  --patreon: #ff424d;
+
+}
+
+/* Set colors for elements */
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8),  rgba(0, 0, 0, 0.9)),
+    var(--bg-art);
+  background-color: #000;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body::before {
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: -1;
+  background-image: url(/img/lines.svg);
+  background-size: 8px;
+  background-position: center center;
+  background-repeat: repeat;
+}
+
+.searchInput {
+    background: var(--main);
+    color: var(--contrast);
+}
+
+.searchButton {
+    background: var(--accent);
+    color: var(--dark);
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, 
+p,
+span {
+    color: var(--contrast);
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+
