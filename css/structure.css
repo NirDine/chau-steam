@@ -23,25 +23,34 @@ img {
 
 body {
   position: relative;
-  display: grid;
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
   transition: 0.2s;
   overflow-x: hidden;
   text-rendering: optimizeSpeed;
     height: 100%;
-    grid-template-areas: "empty search empty";
 }
 
 
-h1 {
-    font-size: 5em;
-}
-p {
-  font-size: 1.1em;
-  line-height: 1.1em;
-  padding: 10px 0px;
-
+header {
+    display: flex;
+    justify-content: flex-end;
+    height: 42px;
+    width: 100%;
+    padding: 1em 2em;
 }
 
+header ul {
+    display: flex;
+    gap: 1em;
+}
+
+header ul li {
+  list-style: none;
+
+}
 
 .container{ 
     display: flex;
@@ -51,7 +60,12 @@ p {
     max-width: 600px;
     grid-area: search;
     gap: 1em;
-    margin-top: -4em;
+
+}
+
+#info {
+    padding: 2em;
+    border-radius: var(-bradius)
 }
 #search {
     display: flex;
@@ -69,4 +83,25 @@ p {
     border-top-right-radius: var(--bradius);
     border-bottom-right-radius: var(--bradius);
     border: 0px;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 5em;
+}
+p {
+  font-size: 1.1em;
+  line-height: 1.1em;
+  padding: 10px 0px;
+
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 1em;
+
 }

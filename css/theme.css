@@ -3,13 +3,17 @@
 /* Import fonts */
 
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400;1,6..12,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
 /* Set font variables */
 :root {
-    --bodyFont: ;
-    --titleFont: ;
+    --bodyFont: 'Nunito Sans', sans-serif;
+    --titleFont: 'Nunito Sans', sans-serif;
 }
 
 /* Set font families for elements */
+body,
 p,
 textarea,
 span {
@@ -29,12 +33,12 @@ h6 {
 
 /* Set color variables */
 :root {
-  --main: #111111;
+  --main: #020202db;
   --accent: #74acdf;
   --contrast: #e1e1e1;
   --selection: ;
   --dark: #353535;
-  --bg-art: url(/img/art/bg.webp);
+  --bg-art: url(/img/art/bg.png);
   --discord: #5865f2;
   --patreon: #ff424d;
 
@@ -63,8 +67,14 @@ body::before {
   background-size: 8px;
   background-position: center center;
   background-repeat: repeat;
+    filter: blur(1px)
 }
 
+
+
+#info {
+    background: var(--main);
+}
 .searchInput {
     background: var(--main);
     color: var(--contrast);
@@ -73,6 +83,19 @@ body::before {
 .searchButton {
     background: var(--accent);
     color: var(--dark);
+}
+
+
+#search .searchInput:hover,
+#search .searchInput:focus-visible {
+    background: #000;
+}
+
+.searchButton:hover,
+.searchButton:focus-visible,
+header ul img:hover,
+header ul a:focus-visible img {
+    filter: brightness(1.2);
 }
 
 
@@ -92,4 +115,21 @@ a {
   color: var(--accent);
 }
 
+strong {
+    font-weight: 700;
+}
 
+mark {
+    color: var(--accent);
+}
+
+
+footer {
+    color: var(--contrast);
+    opacity: 0.8;
+}
+
+footer:hover,
+foooter:focus-within {
+    opacity: 1;
+}
